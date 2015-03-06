@@ -2,7 +2,7 @@
 
 Coordinate transformations involving the Swiss reference frames are
 not terribly well covered in many standard GIS tools and
-libraries. Here I aim at making available some Python code, which is
+libraries. I aim at making available some Python code that is
 supposed to help speed-up people's coordinate transformation tasks.
 
 
@@ -14,7 +14,7 @@ The class `Convert` provides:
     `convert` detects automatically which direction of conversion is desired.<br />
     `points` is a list with tuples (easting, northing), or (x,y).<br />
 	`typ`indicates whether the REST-service of swisstopo or the local
-	 PROJ.4 - libraryis used. 
+	 PROJ.4 - library is used. 
 
 + The method `check_conversion` creates an arbitratry number of random coordinates
     in Switzerland, both in LV03 and WGS84, and converts them using both,
@@ -26,7 +26,7 @@ The "shiftgrid" file `chenyx06etrs.gsb`is essential for a good
 transformation. It is contained in this repo, but you might want to
 rename it. This is because if the file is not found, the latest one
 will be downloaded from the swisstopo site. But beware: There is no
-guarantee that the respective URL wll remain valid.
+guarantee that the respective URL will remain valid.
 
 ## Example
 
@@ -52,5 +52,5 @@ Out[1]:
 + [swisstopo LV03 documentation](http://www.swisstopo.admin.ch/internet/swisstopo/en/home/topics/survey/sys/refsys/switzerland.parsysrelated1.37696.downloadList.97912.DownloadFile.tmp/swissprojectionen.pdf)
 + [swisstopo LV95 documentation](http://www.swisstopo.admin.ch/internet/swisstopo/en/home/topics/survey/sys/frames.parsysrelated1.91518.downloadList.64544.DownloadFile.tmp/broschlv95de.pdf)
 + [The PROJ.4 library](http://trac.osgeo.org/proj/)
-+ ["pyproj" the python intrface to PROJ.4](http://jswhit.github.io/pyproj/)
++ ["pyproj", the Python intrface to PROJ.4](http://jswhit.github.io/pyproj/)
 
